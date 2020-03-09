@@ -94,19 +94,19 @@ object Main extends App
   }
 
   var blackJack = new BlackJack()
-  println( blackJack.play(18, 20) )
+  println( blackJack.play(9, 18) )
 }
 
 class BlackJack()
 {
   def play( num1:Int, num2:Int ) : Int =
   {
-    val div1 :Int = num1 % 21
-    val div2 :Int = num2 % 21
+    val div1 :Int = num1 % 22
+    val div2 :Int = num2 % 22
 
-    if(  )
+    if( div1 == 0 && div2 == 0 )
     {
-      return
+      return 0
     }
     else if( div1 >= div2 )
     {
